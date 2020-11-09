@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>銀河帞拉普</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="monopoly.css">
+</head>
+<body style="background-image: url('遊戲背景圖.jpg');">
+<div id="section_one">
+<div class="setting">
+<div class="choosechr">
+<h1>请选择 Player 4</h1>
+<ul>
+<li><img class="" src="./面具龍蝦.png" alt=""><h1>面具龍蝦</h1></li>
+<li><img class="" src="./壓路雞.png" alt=""><h1>壓路雞</h1></li>
+<li><img class="" src="./星爆兔.png" alt=""><h1>星爆兔</h1></li>
+<li><img class="" src="./阿凡達海獺王.png" alt=""><h1>阿凡達海獺王</h1></li>
+<li><img class="" src="./魔法水母.png" alt=""><h1>魔法水母</h1></li>
+<li><img class="" src="./北斗鵝四郎.png" alt=""><h1>北斗鵝四郎</h1></li>
+<li><img class="" src="./銀河史萊姆.png" alt=""><h1>銀河史萊姆</h1></li>
+</ul>
+</div>
+<div class="choosechr">
+<h1>请选择 Player 3</h1>
+<ul>
+<li><img class="" src="./面具龍蝦.png" alt=""><h1>面具龍蝦</h1></li>
+<li><img class="" src="./壓路雞.png" alt=""><h1>壓路雞</h1></li>
+<li><img class="" src="./星爆兔.png" alt=""><h1>星爆兔</h1></li>
+<li><img class="" src="./阿凡達海獺王.png" alt=""><h1>阿凡達海獺王</h1></li>
+<li><img class="" src="./魔法水母.png" alt=""><h1>魔法水母</h1></li>
+<li><img class="" src="./北斗鵝四郎.png" alt=""><h1>北斗鵝四郎</h1></li>
+<li><img class="" src="./銀河史萊姆.png" alt=""><h1>銀河史萊姆</h1></li>
+</ul>
+</div>
+<div class="choosechr">
+<h1>请选择 Player 2</h1>
+<ul>
+<li><img class="" src="./面具龍蝦.png" alt=""><h1>面具龍蝦</h1></li>
+<li><img class="" src="./壓路雞.png" alt=""><h1>壓路雞</h1></li>
+<li><img class="" src="./星爆兔.png" alt=""><h1>星爆兔</h1></li>
+<li><img class="" src="./阿凡達海獺王.png" alt=""><h1>阿凡達海獺王</h1></li>
+<li><img class="" src="./魔法水母.png" alt=""><h1>魔法水母</h1></li>
+<li><img class="" src="./北斗鵝四郎.png" alt=""><h1>北斗鵝四郎</h1></li>
+<li><img class="" src="./銀河史萊姆.png" alt=""><h1>銀河史萊姆</h1></li>
+</ul>
+</div>
+<div class="choosechr">
+<h1>请选择 Player 1</h1>
+<ul>
+<li><img class="" src="./面具龍蝦.png" alt=""><h1>面具龍蝦</h1></li>
+<li><img class="" src="./壓路雞.png" alt=""><h1>壓路雞</h1></li>
+<li><img class="" src="./星爆兔.png" alt=""><h1>星爆兔</h1></li>
+<li><img class="" src="./阿凡達海獺王.png" alt=""><h1>阿凡達海獺王</h1></li>
+<li><img class="" src="./魔法水母.png" alt=""><h1>魔法水母</h1></li>
+<li><img class="" src="./北斗鵝四郎.png" alt=""><h1>北斗鵝四郎</h1></li>
+<li><img class="" src="./銀河史萊姆.png" alt=""><h1>銀河史萊姆</h1></li>
+</ul>
+</div>
+<div class="npcnum choosebox">
+<h1>电脑人数</h1>
+<ul>
+<li>0</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</div>
+<div class="playernum choosebox">
+<h1>玩家人数</h1>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+</div>
+</div>
+
+<div class="map">
+<div class="box" id="b26"><h3></h3></div>
+<div class="box" id="b25"><h3></h3></div>
+<div class="box" id="b24" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b23"><h3></h3></div>
+<div class="box" id="b22" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b21" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b20" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b19" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b18" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b17"><h3></h3></div>
+<div class="box" id="b16"><h3></h3></div>
+<div class="box" id="b15"><h3></h3></div>
+<div class="box" id="b27" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="box" id="b14" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b28" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="box" id="b13" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b29" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="hi"></div>
+<div class="box" id="b12" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b0"><h3></h3>
+<img class="chr" id="player1" src="https://www.jq22.com/demo/gamedfmcom201910161047/" alt="">
+<img class="chr" id="player2" src="https://www.jq22.com/demo/gamedfmcom201910161047/" alt="">
+<img class="chr" id="player3" src="https://www.jq22.com/demo/gamedfmcom201910161047/" alt="">
+<img class="chr" id="player4" src="https://www.jq22.com/demo/gamedfmcom201910161047/" alt="">
+</div>
+<div class="box" id="b1" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b2" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b3" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b4"><h3></h3></div>
+<div class="box" id="b5" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b6" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b7"><h3></h3></div>
+<div class="box" id="b8"><h3></h3></div>
+<div class="box" id="b9"><h3></h3></div>
+<div class="box" id="b10" style="box-shadow: rgb(69, 69, 69) 1px 1px 1px inset, rgb(69, 69, 69) 1px -1px 1px inset, rgb(69, 69, 69) -1px 1px 1px inset, rgb(69, 69, 69) -1px -1px 1px inset;"><h3></h3></div>
+<div class="box" id="b11"><h3></h3></div>
+</div>
+<div class="outinfo">
+<div class="p1info">
+<h1></h1>
+<h2></h2>
+</div>
+<div class="p2info">
+<h1></h1>
+<h2></h2>
+</div>
+<div class="p3info">
+<h1></h1>
+<h2></h2>
+</div>
+<div class="p4info">
+<h1></h1>
+<h2></h2>
+</div>
+<div class="control">
+<h1></h1>
+<div class="dice"></div>
+</div>
+</div>
+<div class="hide">
+<div class="arrow"><img src="./arrow.png"></div>
+<div class="construct"><img src="./c1.png" alt=""><img src="./c2.png" alt=""><img src="./c3.png" alt=""><img src="./c4.png" alt=""><img src="./c5.png" alt=""></div>
+</div>
+<div class="bet">
+<div class="spcontrol">
+<div class="spdice"></div>
+</div>
+</div>
+<div class="purchasebox">
+<h1></h1>
+<div class="bar"><h2>购买地产</h2></div>
+<div class="btn1">确定</div>
+<div class="btn2">取消</div>
+</div>
+<div class="upgradebox">
+<h1></h1>
+<div class="bar"><h2>升级房子</h2></div>
+<div class="btn1">确定</div>
+<div class="btn2">取消</div>
+</div>
+<div class="msgbox">
+<div class="msg"></div>
+</div>
+<div class="infobox">
+<div class="bar"><h2>俄罗斯</h2></div>
+<ul>
+<li>地主：</li>
+<li>价格：</li>
+</ul>
+</div>
+<div class="chat">
+        <div id="div01">
+                玩家名稱：<input id="nickname" /><br />
+                聊天內容：<input id="content" /><br />
+                <div>
+                <button id="send">送出資料</button>
+                </div>
+                <div id="show01">
+                <div id="showtext"></div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="./initializing.js"></script>
+<script src="./data.js"></script>
+<script src="./information.js"></script>
+<script src="./monopoly.js"></script>
+<script src="./msg.js"></script>
+<script src="./check.js"></script>
+<script src="script.js"></script>
+
+
+</body></html>
